@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper    
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.dao.mapper.teachermapper">
+	<select id="getAllTeacher" resultMap="teacherlist">
+		select * from teacher
+	</select>
+	<resultMap type="com.spring.entity.teacher" id="teacherlist">
+		<result column="tid" jdbcType="INTEGER" property="tid" />
+		<result column="name" jdbcType="VARCHAR" property="name" />
+		<result column="workid" jdbcType="VARCHAR" property="workid" />
+		<result column="academic" jdbcType="VARCHAR" property="academic" />
+		<result column="courses" jdbcType="VARCHAR" property="courses" />
+	</resultMap>
+</mapper>
